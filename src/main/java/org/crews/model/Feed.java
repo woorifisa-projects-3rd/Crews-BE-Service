@@ -13,7 +13,7 @@ import java.util.List;
 @Getter
 @Setter
 @Builder
-public class Feed {
+public class Feed extends BaseTimeEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

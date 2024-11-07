@@ -10,7 +10,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Builder
-public class AgitAndAccount {
+public class AgitAndAccount extends BaseTimeEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

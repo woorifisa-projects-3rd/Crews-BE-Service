@@ -13,7 +13,7 @@ import java.util.List;
 @Getter
 @Setter
 @Builder
-public class Account {
+public class Account extends BaseTimeEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
