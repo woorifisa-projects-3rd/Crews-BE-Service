@@ -21,10 +21,10 @@ public class AccountHistory {
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
-    private InOutType inOutType;
+    private TranType tranType;
 
     @Column(nullable = false)
-    private LocalDateTime transactionType;
+    private LocalDateTime transactionTime;
 
     private String cardNumber;
 

@@ -20,7 +20,7 @@ public class Agit extends BaseTimeEntity {
     private Long id;
 
     @Column(nullable = false, unique = true)
-    private String name;
+    private String agitName;
 
     @ColumnDefault("10")
     private Integer maxPerson;

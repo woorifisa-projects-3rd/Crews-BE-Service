@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.ColumnDefault;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Getter
 @Setter
@@ -25,5 +27,8 @@ public class Membership extends BaseTimeEntity{
     @Enumerated(EnumType.STRING)
     @ColumnDefault("'member'")
     private MemberRole role;
+
+    @Column(nullable = false)
+    private LocalDateTime joinedAt;
 
 }

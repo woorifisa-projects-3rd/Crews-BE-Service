@@ -22,15 +22,13 @@ public class Address extends BaseTimeEntity {
     @Column(nullable = false)
     private String addressSi;
 
-
     @Column(nullable = false)
     private String addressGuGun;
-
 
     @Column(nullable = false)
     private String addressDong;
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
-    private AddressType type;
+    private AddressType addressType;
 }
