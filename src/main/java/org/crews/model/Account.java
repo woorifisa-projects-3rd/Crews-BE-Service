@@ -46,8 +46,8 @@ public class Account extends BaseTimeEntity{
     @OneToMany(mappedBy = "account")
     private List<AgitAndAccount> agitAndAccounts = new ArrayList<>();
 
-    @OneToMany(mappedBy = "account")
-    private List<AccountHistory> accountHistories = new ArrayList<>();
+    @OneToOne(mappedBy = "account")
+    private AccountHistory accountHistory;
 
     @OneToMany(mappedBy = "account")
     private List<Card> cards = new ArrayList<>();
