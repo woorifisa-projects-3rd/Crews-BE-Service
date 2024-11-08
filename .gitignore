@@ -35,6 +35,9 @@ out/
 
 ### VS Code ###
 .vscode/
+### properties ###
 src/main/resources/application.properties
 src/main/resources/application-dev.properties
 src/main/resources/application-prod.properties
+### testfile ###
+java/org/crews/controller/TestController.java
