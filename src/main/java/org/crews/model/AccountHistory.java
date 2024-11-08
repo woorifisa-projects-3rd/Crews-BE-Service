@@ -1,22 +1,22 @@
 package org.crews.model;
 
 import jakarta.persistence.*;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
-@Entity
 @Getter
 @Setter
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
 public class AccountHistory extends BaseTimeEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY)
     private Account account;
 
     @Column(nullable = false)
@@ -35,6 +35,6 @@ public class AccountHistory extends BaseTimeEntity{
     private Long transactionAmount;
 
     @Column(nullable = false)
-    private Long AfterBalanceAmount;
+    private Long afterBalanceAmount;
 
 }

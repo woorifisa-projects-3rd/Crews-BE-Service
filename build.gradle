@@ -43,6 +43,12 @@ dependencies {
 	// JWT 관련 의존성
 	implementation group: 'org.jsoup', name: 'jsoup', version: '1.7.2'
 	implementation group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
+	// Webclient 사용을 위한 webflux 의존성
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	// RabbitMQ 의존성
+//	implementation 'org.springframework.boot:spring-boot-starter-amqp'
+
+
 
 }
 

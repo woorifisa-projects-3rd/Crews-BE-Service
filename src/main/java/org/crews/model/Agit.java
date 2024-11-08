@@ -1,19 +1,19 @@
 package org.crews.model;
 
 import jakarta.persistence.*;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.ColumnDefault;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-@Entity
 @Getter
 @Setter
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
 public class Agit extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,19 +35,19 @@ public class Agit extends BaseTimeEntity {
     private boolean isDeleted;
 
     @OneToMany(mappedBy = "agit")
-    List<Membership> memberships = new ArrayList<>();
+    private List<Membership> memberships = new ArrayList<>();
 
     @OneToMany(mappedBy = "agit")
-    List<InterestingAndAgit> interestingAndAgits = new ArrayList<>();
+    private List<InterestingAndAgit> interestingAndAgits = new ArrayList<>();
 
     @OneToMany(mappedBy = "agit")
-    List<Feed> feeds = new ArrayList<>();
+    private List<Feed> feeds = new ArrayList<>();
+
+    @OneToOne(mappedBy = "agit")
+    private Introducing introducing;
 
     @OneToMany(mappedBy = "agit")
-    List<Introducing> introducings = new ArrayList<>();
-
-    @OneToMany(mappedBy = "agit")
-    List<RegularCrewing> regularCrewings = new ArrayList<>();
+    private List<RegularCrewing> regularCrewings = new ArrayList<>();
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Dues dues;

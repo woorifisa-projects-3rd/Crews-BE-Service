@@ -1,18 +1,18 @@
 package org.crews.model;
 
 import jakarta.persistence.*;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.ColumnDefault;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
 @Getter
 @Setter
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
 public class Account extends BaseTimeEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -46,8 +46,8 @@ public class Account extends BaseTimeEntity{
     @OneToMany(mappedBy = "account")
     private List<AgitAndAccount> agitAndAccounts = new ArrayList<>();
 
-    @OneToMany(mappedBy = "account")
-    private List<AccountHistory> accountHistories = new ArrayList<>();
+    @OneToOne(mappedBy = "account")
+    private AccountHistory accountHistory;
 
     @OneToMany(mappedBy = "account")
     private List<Card> cards = new ArrayList<>();
