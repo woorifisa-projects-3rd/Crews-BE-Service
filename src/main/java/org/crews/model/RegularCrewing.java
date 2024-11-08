@@ -5,12 +5,12 @@ import lombok.*;
 
 import java.time.LocalDateTime;
 
-@Entity
 @Getter
 @Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
 public class RegularCrewing extends BaseTimeEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,7 +22,7 @@ public class RegularCrewing extends BaseTimeEntity{
     private String image;
 
     @Column(nullable = false)
-    private String regular_name;
+    private String regularName;
 
     @Column(nullable = false)
     private String place;

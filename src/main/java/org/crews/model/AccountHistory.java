@@ -5,12 +5,12 @@ import lombok.*;
 
 import java.time.LocalDateTime;
 
-@Entity
 @Getter
 @Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
 public class AccountHistory extends BaseTimeEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,6 +35,6 @@ public class AccountHistory extends BaseTimeEntity{
     private Long transactionAmount;
 
     @Column(nullable = false)
-    private Long AfterBalanceAmount;
+    private Long afterBalanceAmount;
 
 }

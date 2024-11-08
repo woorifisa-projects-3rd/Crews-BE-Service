@@ -6,12 +6,12 @@ import lombok.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
 @Getter
 @Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
 public class Bank extends BaseTimeEntity{
 
     @Id
